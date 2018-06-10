@@ -1,19 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Card from "./components/Card";
+import Nav from "./components/Nav";
+// import Row from "./components/Row";
+import Wrapper from "./components/Wrapper";
+import bears from "./bears.json";
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    bears,
+    count: 0
+  };
+
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+    (Math.random() * 5) + 1
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+        <Nav 
+          count={this.state.count}
+          handleIncrement={this.handleIncrement}
+        />
+        <div className="row">
+          {this.state.bears.map(bear => (
+            <Card
+              name={bear.name}
+              id={bear.id}
+              key={bear.id}
+              image={bear.image}
+              handleIncrement={this.handleIncrement}
+            />
+          ))}
+          </div>
+      </Wrapper>
     );
   }
 }
