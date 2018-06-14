@@ -23,32 +23,34 @@ class App extends Component {
   state = {
     bears,
     count: 0,
+    score: 0,
     clickedBears: []
   };
 
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
-
-  clicked = (id) => {
-    const clickedBears = this.state.bears.filter(bear => bear.id === id);
-    this.setState({ clickedBears });
-  }
   
-  clickedBear = () => {
-    //const clickedBears = this.state.bears.filter(bear => bear.clicked === false);
-    this.clicked(bears);
-    //this.setState({ bears });
-    // if (this.props.dataclicked === "false") {
-    //   this.handleIncrement();
-    // }
-    const clickedBears = this.state.bears.filter(bear => bear.dataclicked === "false");
-    this.setState({ clickedBears });
-    
+  clickedBear = (id) => {
+
+    let clickedBears = this.state.clickedBears;
+    const bearId = clickedBears.find(element => element === id);
+    if (bearId) {
+      console.log("You already clicked this");
+      if (this.state.score < this.state.count) {
+        this.setState({ score: this.state.count });
+      }
+      this.setState({ count: 0, clickedBears: [] });
+    } else {
+      this.handleIncrement();
+      clickedBears.push(id);
+      this.setState({
+        clickedBears : clickedBears
+      });
+    }
+
     let shuffledBears = shuffleArray(this.state.bears);
     this.setState({ shuffledBears });
-    //console.log(event.target.getAttribute('dataclicked'));
-    console.log(clickedBears);
   }
   
 
@@ -59,6 +61,7 @@ class App extends Component {
       <Wrapper>
         <Nav 
           count={this.state.count}
+          score={this.state.score}
           handleIncrement={this.handleIncrement}
         />
         <div className="row">
@@ -68,10 +71,7 @@ class App extends Component {
               id={bear.id}
               key={bear.id}
               image={bear.image}
-              dataclicked={this.clicked}
-              // handleIncrement={this.handleIncrement}
               clickedBear={this.clickedBear}
-              
             />
           ))}
           </div>
