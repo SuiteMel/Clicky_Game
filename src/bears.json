@@ -2,61 +2,61 @@
   {
     "id": 1,
     "name": "Baby Grizz", 
-    "image": "images/baby-grizz.jpg"
+    "image": "./images/baby-grizz.jpg"
   },
   {
     "id": 2,
     "name": "Baby Ice Bear", 
-    "image": "images/baby-ice.jpg"
+    "image": "./images/baby-ice.jpg"
   },
   {
     "id": 3,
     "name": "Baby Panda", 
-    "image": "images/baby-panda.jpg"
+    "image": "./images/baby-panda.jpg"
   },
   {
     "id": 4,
     "name": "Charlie", 
-    "image": "images/charlie.jpg"
+    "image": "./images/charlie.jpg"
   },
   {
     "id": 5,
     "name": "Chloe", 
-    "image": "images/chloe.jpg"
+    "image": "./images/chloe.jpg"
   },
   {
     "id": 6,
     "name": "Doctor Clark", 
-    "image": "images/doctor-clark.jpg"
+    "image": "./images/doctor-clark.jpg"
   },
   {
     "id": 7,
     "name": "Grizz", 
-    "image": "images/grizzly.jpg"
+    "image": "./images/grizzly.jpg"
   },
   {
     "id": 8,
     "name": "Ice Bear", 
-    "image": "images/ice-bear.jpg"
+    "image": "./images/ice-bear.jpg"
   },
   {
     "id": 9,
     "name": "Nate", 
-    "image": "images/nate.jpg"
+    "image": "./images/nate.jpg"
   },
   {
     "id": 10,
     "name": "Nom Nom", 
-    "image": "images/nom-nom.jpg"
+    "image": "./images/nom-nom.jpg"
   },
   {
     "id": 11,
     "name": "Panda", 
-    "image": "images/panda.jpg"
+    "image": "./images/panda.jpg"
   },
   {
     "id": 12,
     "name": "Ranger Tabes", 
-    "image": "images/ranger-tabes.jpg"
+    "image": "./images/ranger-tabes.jpg"
   }
 ]
