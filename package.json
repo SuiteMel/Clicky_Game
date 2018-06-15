@@ -1,5 +1,6 @@
 {
   "name": "clicky_game",
+  "homepage": "http://suitemel.com/clicky_game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "homepage": "http://suitemel.github.io/clicky_game"
+  }
 }
