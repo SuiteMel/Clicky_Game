@@ -1,8 +1,8 @@
 {
   "name": "clicky_game",
-  "homepage": "http://suitemel.com/clicky_game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://suitemel.com/clicky_game/",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.0",

@@ -49,6 +49,11 @@ class App extends Component {
       });
     }
 
+    if (this.state.count > 10) {
+      this.setState({ count: 0, score: 12, clickedBears: [] });
+      alert("You win the game! :D");
+    }
+
     let shuffledBears = shuffleArray(this.state.bears);
     this.setState({ shuffledBears });
   }
@@ -62,7 +67,6 @@ class App extends Component {
         <Nav 
           count={this.state.count}
           score={this.state.score}
-          handleIncrement={this.handleIncrement}
         />
         <div className="row">
           {shuffledBears.map(bear => (
